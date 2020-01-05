@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     url: req.url
   }
 
-  // JSON
+  // JSON, send detecta el objeto
   res.send(salida)
 })
 
