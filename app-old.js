@@ -1,6 +1,8 @@
 const http = require('http')
 
+// acepta todas las urls y lo mostramos con req.url
 http.createServer((req, res) => {
+
     res.writeHead(200, {'Content-type': 'application/json'})
 
     let salida = {
@@ -10,7 +12,8 @@ http.createServer((req, res) => {
     }
 
     res.write(JSON.stringify(salida))
-    res.end()
+    res.end() // terminarmos de hacer la respuesta
+
 })
 .listen(8080)
 
