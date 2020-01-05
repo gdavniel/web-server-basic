@@ -52,4 +52,12 @@ app.get('/about', (req, res) => {
     })
     
 
-app.listen(3000)
+// Pasos para heroku:
+// 1. no sabemos el puerto que heroku nos de
+// 2. tenemos que tener el script start
+
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+    console.log(`corriendo en el puerto ${port}`)
+})
