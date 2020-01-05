@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   
   let salida = {
     nombre: 'daniel',
@@ -9,6 +9,7 @@ app.get('/', function (req, res) {
     url: req.url
   }
 
+  // JSON
   res.send(salida)
 })
 
